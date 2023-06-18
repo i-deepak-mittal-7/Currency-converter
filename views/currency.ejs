@@ -1,0 +1,38 @@
+<%- include("header.ejs") -%>
+
+    <div class="box" id="heading">
+        <h1>  ALPHA CONVERTER  </h1>
+    </div>
+
+    <div class="input-form">
+
+        <form action="/temperature" method="post">
+            <label >Choose Current Unit</label>
+            <select name="from">
+                <option value="Celcius">Celcius</option>
+                <option value="Kelvin">Kelvin</option>
+                <option value="Fahrenheit">Fahrenheit</option>
+            </select>
+            <br><br>
+            <label> Enter Value Here: </label>
+            <input type="number"> 
+        </form> 
+    
+        <form action="/temperature" method="post">
+            <label >Choose Final Unit</label>
+            <select name="to">
+                <option value="Celcius">Celcius</option>
+                <option value="Kelvin">Kelvin</option>
+                <option value="Fahrenheit">Fahrenheit</option>
+            </select>
+            <br><br>
+        <button type="submit" class="btn btn-primary">Convert</button>
+        </form>
+    </div>
+    <br>
+    <div>
+        ANSWER: <%= answer %>
+    </div>
+        
+
+<%- include("footer.ejs") -%>

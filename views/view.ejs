@@ -1,0 +1,30 @@
+<%- include("header.ejs") -%>
+
+    <div class="box" id="heading">
+        <h3> This data is according to Indian Rupee </h3>
+    </div>
+  
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Currency Name</th>
+          <th scope="col">Currency Code</th>
+          <th scope="col">Currency Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(var i=1; i<viewData.length; i++) { %>
+        <tr>
+          <th scope="row"><%= i %></th>
+          <td><%= viewData[i].currencyName %></td>
+          <td><%= viewData[i].currencyCode %></td>
+          <td><%= viewData[i].currencyVal %></td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+
+    </div>
+
+<%- include("footer.ejs") -%>

@@ -1,0 +1,51 @@
+<%- include("header.ejs") -%>
+
+    <div class="box" id="heading">
+        <h3> Currency Converter </h3>
+    </div>
+    
+    <br>
+    <form action="/convert" method="post">
+    <div class="row">
+      <div class="col-6">
+        <select class="form-select" aria-label="Default select example" name="from">
+          <option selected disabled value="">Convert from</option>
+          <% for(var i=1; i<viewData.length; i++) { %>
+          <option value="<%= viewData[i].currencyCode %>"><%= viewData[i].currencyName %></option>
+          <% } %>
+        </select>
+        <br>
+        <input class="form-control" type=number name="fromVal" value=<%= prevVal %>>
+      </div>
+      <div class="col-6">
+        <select class="form-select" aria-label="Default select example" name="to">
+          <option selected disabled value="">Convert to</option>
+          <% for(var i=1; i<viewData.length; i++) { %>
+            <option value="<%= viewData[i].currencyCode %>"><%= viewData[i].currencyName %></option>
+          <% } %>
+        </select>
+        <br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 text-center">
+        <br>
+        <button class="w-25 btn btn-primary" type="submit"> Convert </button>
+      </div>
+    </div>
+    </form>
+    <div class="row">
+      <div class="col-12">
+        <br>
+        <br>
+        <% if (alert) { %>
+        <div class="alert alert-warning" role="alert">
+          <%= alert %>
+        </div>
+        <% } %>
+        <!-- result   -->
+        <h4> Result is: <%= result %></h4>
+      </div>
+    </div>
+    </div>
+
