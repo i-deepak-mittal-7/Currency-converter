@@ -45,22 +45,10 @@ body {
     display: flex;
     
 }
-.footer-padding {
-	padding-bottom: 60px;
-}
 
-.footer {
-	position: sticky;
-	text-align: center;
-    padding-top: 1px;
-	bottom: 0;
-	width: 100%;
-	height: 60px;
+footer {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
 	background-color: #1a48bc;
-}
-
-.footer p {
-	margin-top: 20px;
-	font-size: 20px;
-    color: #fff;
 }
