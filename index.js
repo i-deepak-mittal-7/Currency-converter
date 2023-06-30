@@ -18,6 +18,7 @@ var viewData = [];
 var globalCountryData = [];
 
 function dataFetch(type, res){
+    viewData = [];
     const countryUrl = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies.json";
     const currencyUrl = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/inr.json";
     https.get(countryUrl, function(response){

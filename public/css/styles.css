@@ -7,6 +7,10 @@ body {
     padding-bottom: 70px;
 }
 
+.body-container {
+    min-height: 100vh;
+}
+
 .navbar {
 	background-color: rgb(0,0,1);
     padding-top: 5px;
@@ -18,7 +22,7 @@ body {
     letter-spacing: 5px;
 }
 
-.navbar-brand {
+.navbar-brand, .navbar-brand:hover {
     color: white;
 	padding-top: 20px;
 }
